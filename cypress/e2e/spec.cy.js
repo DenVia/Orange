@@ -1,6 +1,6 @@
 
 
-//e:\work\cypress\projects\orange
+//percy exec -- cypress run
 
 /// <reference types= 'cypress'/> 
 
@@ -11,7 +11,7 @@ describe('Solid logic e2e test run', () => {
 
     cy.visit('https://orange-wave-dev.solidlogic.dev/');
 
-    
+    //cy. pause()
 
    cy.percySnapshot('Login page start');
 
@@ -140,27 +140,41 @@ cy.get('#ticket').type('AutoTestTicket')
   .tab()
   .type('081255')
   .tab()
-  .type('{downArrow}').percySnapshot('Firms List')
+  .type('{downArrow}')
+  .percySnapshot('Firms List');
+
+  cy.get('[placeholder="Select firm"]')
+  .click()
+  .percySnapshot('Group List');
   
+  cy.get('[placeholder="Select group"]')
+  .click()
+  .percySnapshot('Group List');
 
-//cy.percySnapshot('Firms List')
+  cy.get('[placeholder="Select account"]')
+  .click()
+  .percySnapshot('Group List');
 
-//cy.contains('Select firm').click().type('{downArrow}').type('{Enter}').tab().type('{downArrow}');
+//setting leg's fields values manually
 
-//cy.percySnapshot('Groups List')
-
-//cy.contains('Select group').click().type('{downArrow}').type('{Enter}').tab().type('{downArrow}').percySnapshot('Accounts List').type('{Enter}');
-
-//cy.percySnapshot('Accounts List')
-
-
-
-
-
-
+  cy.get('[placeholder="Select firm"]')
+  .click()
+  .type('{downArrow}').type('{downArrow}')
+  .type('{Enter}')
+  .tab()
+  .type('{downArrow}').type('{downArrow}')
+  .type('{Enter}')
+  .tab()
+  .type('{downArrow}').type('{downArrow}')
+  .type('{Enter}')
+  .tab().tab().tab().tab().tab().tab()
+  .click()
   
+  cy.get('[data-value="Sell"]').click()
 
 
-    
+
+
+
   })
 })
