@@ -4,14 +4,17 @@
 
 /// <reference types= 'cypress'/> 
 
+import { type } from "cypress/types/jquery";
+
 describe('Solid logic e2e test run', () => {
+
   it('Full test', () => {
 
     cy.viewport(1920, 1080)
 
     cy.visit('https://orange-wave-dev.solidlogic.dev/');
 
-    //cy. pause()
+    cy. pause()
 
    cy.percySnapshot('Login page start');
 
@@ -27,7 +30,7 @@ describe('Solid logic e2e test run', () => {
 
    //cy.get('.MuiButtonBase-root').click();
 
-   cy.get('[class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-1u0h3mu"]').type('viacheslav.denysov@solidlogic.com')
+   cy.get('[id=":r0:"]').type('viacheslav.denysov@solidlogic.com')
 
    cy.get('[name="password"]').type('ZXCasd098!');
 
@@ -40,7 +43,7 @@ describe('Solid logic e2e test run', () => {
 
     cy.contains('Log In').click();
 
-   cy.percySnapshot('Dashboard')
+   cy.percySnapshot('Dashboard');
 
     cy.get('[href="/trade-entry"]').then((link) => {
       cy.request(link.prop('href'))
@@ -48,7 +51,7 @@ describe('Solid logic e2e test run', () => {
       .should('eq', 200);
     })
 
-    cy.get('[data-testid="SwitchHorizontalIcon"]').click()
+    cy.get('[data-testid="SwitchHorizontalIcon"]').click();
 
    cy.percySnapshot('Dashboard Empty')
 
@@ -61,6 +64,8 @@ describe('Solid logic e2e test run', () => {
     cy.contains('GE').click()
 
     cy.contains('Add Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('Add Hedge Leg').click()
   
@@ -172,8 +177,17 @@ cy.get('#ticket').type('AutoTestTicket')
   
   cy.get('[data-value="Sell"]').click()
 
-
-
+  cy.get('[id=":ro:"]').click()
+  .type('{backspace}').type('{backspace}').type('{backspace}').type('{backspace}').type('{backspace}').type('{backspace}')
+  .type('10')
+  .tab()
+  .type('{downArrow}').type('{downArrow}').type('{Enter}')
+  .tab().tab().tab().tab()
+  .type('{downArrow}').type('{downArrow}').type('{Enter}')
+  .tab().tab().tab().tab()
+  .type('2')
+  .tab().tab().tab().tab()
+  .type('2')
 
 
   })
