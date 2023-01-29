@@ -4,8 +4,6 @@
 
 /// <reference types= 'cypress'/> 
 
-import { type } from "cypress/types/jquery";
-
 describe('Solid logic e2e test run', () => {
 
   it('Full test', () => {
@@ -181,13 +179,10 @@ cy.get('#ticket').type('AutoTestTicket')
   .type('{backspace}').type('{backspace}').type('{backspace}').type('{backspace}').type('{backspace}').type('{backspace}')
   .type('10')
   .tab()
-  .type('{downArrow}').type('{downArrow}').type('{Enter}')
-  .tab().tab().tab().tab()
-  .type('{downArrow}').type('{downArrow}').type('{Enter}')
-  .tab().tab().tab().tab()
-  .type('2')
-  .tab().tab().tab().tab()
-  .type('2')
+  .click()
+  
+  cy.get('[role= "option"]').contains('Outright').click()
+  
 
 
   })
