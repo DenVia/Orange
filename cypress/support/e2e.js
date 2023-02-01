@@ -15,6 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 require('cypress-plugin-tab');
+require('cypress-xpath');
 import './commands'
 import '@percy/cypress'
 
