@@ -66,70 +66,136 @@ describe('Solid logic e2e test run', () => {
     cy.wait(1000)
 
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
   
     cy.contains('GE0').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('GE2').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('GE3').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('GE4').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('GE5').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
   
     cy.contains('SR3').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('S0').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('S2').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('S3').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Hedge Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('S4').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('Add Hedge Leg').click()
 
+    cy.wait(1000)
+
     cy.contains('S5').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
+
+    cy.wait(1000)
 
     cy.contains('Add Hedge Leg').click()
 
