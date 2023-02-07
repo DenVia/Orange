@@ -385,5 +385,51 @@ cy.get('#ticket').type('AutoTestTicket')
  
  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
  .click()
+
+ // customizing ratios
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[6]/div/span/div/div/input')
+ .dblclick()
+ .type('2')
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[6]/div/svg[2]/svg/path')
+ .click()
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[6]/div/svg[2]/svg/path')
+ .click()
+ .click()
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[4]/td[6]/div/svg[2]/svg/path')
+ .click()
+ .click()
+ .click()
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[6]/div/svg[2]/svg/path')
+ .click()
+ .click()
+ .click()
+ .click()
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[6]/div/span/div/div/input')
+ .click()
+ .type('{backspace}')
+ .type('{backspace}')
+ .type('{backspace}')
+ .type('{backspace}')
+ .type('6.5')
+
+ // customizing unit prices
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[9]/div/span/div/div/input')
+.dblclick()
+.type('{backspace}')
+.type('10')
+
+
+
   })
 })
