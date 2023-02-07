@@ -53,8 +53,8 @@ describe('Solid logic e2e test run', () => {
 
    cy.percySnapshot('Dashboard Empty')
 
-    cy.contains('S5').click()
-      .tab()
+    cy.xpath('/html/body/div/div[2]/div[1]/main/div[1]/div/div/div[1]/div[2]/div/div/div/div[3]/div/div/div/input')
+      .click()
       .type('100');
 
 // Product Buttons Check----------------------------------
@@ -224,7 +224,6 @@ cy.get('#ticket').type('AutoTestTicket')
   .click()
   .percySnapshot('Group List');
 
-//setting leg's fields values manually
 
   cy.get('[placeholder="Select firm"]')
   .click()
@@ -236,20 +235,155 @@ cy.get('#ticket').type('AutoTestTicket')
   .tab()
   .type('{downArrow}').type('{downArrow}')
   .type('{Enter}')
-  .tab().tab().tab().tab().tab().tab()
-  .click()
-  
-  cy.get('[data-value="Sell"]').click()
 
-  cy.get('[id=":ro:"]').click()
-  .type('{backspace}').type('{backspace}').type('{backspace}').type('{backspace}').type('{backspace}').type('{backspace}')
-  .type('10')
-  .tab()
-  .click()
-  
-  cy.get('[role= "option"]').contains('Outright').click()
-  
+//setting leg's fields values manually
 
+//buy/sell dropdown menus
 
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+  
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ // put/call dropdown menus
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[3]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+  
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[3]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[3]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[7]/td[3]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[3]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[11]/td[3]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[2]/div/div')
+ .click()
+ 
+ cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+ .click()
   })
 })
