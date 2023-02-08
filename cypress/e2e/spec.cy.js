@@ -61,6 +61,8 @@ describe('Solid logic e2e test run', () => {
 
     cy.contains('GE').click()
 
+    cy.wait(1000)
+
     cy.contains('Add Leg').click()
 
     cy.wait(1000)
@@ -203,233 +205,415 @@ describe('Solid logic e2e test run', () => {
  
 //Filling ticket info
 
-cy.get('#ticket').type('AutoTestTicket')
-  .tab()
-  .type('081240')
-  .tab()
-  .type('081255')
-  .tab()
-  .type('{downArrow}')
-  .percySnapshot('Firms List');
+// cy.get('#ticket').type('AutoTestTicket')
+//   .tab()
+//   .type('081240')
+//   .tab()
+//   .type('081255')
+//   .tab()
+//   .type('{downArrow}')
+//   .percySnapshot('Firms List');
 
-  cy.get('[placeholder="Select firm"]')
-  .click()
-  .percySnapshot('Group List');
+//   cy.get('[placeholder="Select firm"]')
+//   .click()
+//   .percySnapshot('Group List');
   
-  cy.get('[placeholder="Select group"]')
-  .click()
-  .percySnapshot('Group List');
+//   cy.get('[placeholder="Select group"]')
+//   .click()
+//   .percySnapshot('Group List');
 
-  cy.get('[placeholder="Select account"]')
-  .click()
-  .percySnapshot('Group List');
+//   cy.get('[placeholder="Select account"]')
+//   .click()
+//   .percySnapshot('Group List');
 
 
-  cy.get('[placeholder="Select firm"]')
-  .click()
-  .type('{downArrow}').type('{downArrow}')
-  .type('{Enter}')
-  .tab()
-  .type('{downArrow}').type('{downArrow}')
-  .type('{Enter}')
-  .tab()
-  .type('{downArrow}').type('{downArrow}')
-  .type('{Enter}')
+//   cy.get('[placeholder="Select firm"]')
+//   .click()
+//   .type('{downArrow}').type('{downArrow}')
+//   .type('{Enter}')
+//   .tab()
+//   .type('{downArrow}').type('{downArrow}')
+//   .type('{Enter}')
+//   .tab()
+//   .type('{downArrow}').type('{downArrow}')
+//   .type('{Enter}')
 
 //setting leg's fields values manually
 
 //buy/sell dropdown menus
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
   
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- // put/call dropdown menus
+//  // put/call dropdown menus
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[3]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[3]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
   
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[3]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[3]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[3]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[3]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[7]/td[3]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[7]/td[3]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[3]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[3]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[11]/td[3]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[11]/td[3]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[2]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
- .click()
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[2]/div/div')
- .click()
+//  cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[2]/div/div')
+//  .click()
  
- cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  cy.xpath('/html/body/div[2]/div[3]/ul/li[1]')
+//  .click()
+
+ // customizing ratios 
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[4]/div/div/div/input')
  .click()
+ .tab()
+ .tab()
+ .tab()
+ .type('2')
+ 
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[4]/div/div/div/input')
+ .click()
+ .tab()
+ .tab()
+ .tab()
+ .type('3')
 
- // customizing ratios
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[4]/div/div/div/input')
+ .click()
+ .tab()
+ .tab()
+ .tab()
+ .type('4')
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[6]/div/span/div/div/input')
- .dblclick()
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[4]/td[4]/div/div/div/input')
+ .click()
+ .tab()
+ .tab()
+ .tab()
+ .type('5')
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[4]/div/div/div/input')
+ .click()
+ .tab()
+ .tab()
+ .tab()
+ .type('6')
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[4]/div/div/div/input')
+ .click()
+ .tab()
+ .tab()
+ .tab()
+ .type('7')
+
+ // customizing deltas
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[7]/div/div/input')
+ .click()
+ .type('{selectall}')
+ .type('{backspace}')
  .type('2')
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[6]/div/svg[2]/svg/path')
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[7]/div/div/input')
  .click()
- .click()
-
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[6]/div/svg[2]/svg/path')
- .click()
- .click()
- .click()
-
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[4]/td[6]/div/svg[2]/svg/path')
- .click()
- .click()
- .click()
- .click()
-
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[6]/div/svg[2]/svg/path')
- .click()
- .click()
- .click()
- .click()
- .click()
-
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[6]/div/span/div/div/input')
- .click()
+ .type('{selectall}')
  .type('{backspace}')
- .type('{backspace}')
- .type('{backspace}')
- .type('{backspace}')
- .type('6.5')
+ .type('3')
 
- // customizing unit prices
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[7]/div/div/input')
+ .click()
+ .type('{selectall}')
+ .type('{backspace}')
+ .type('4')
 
- cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[9]/div/span/div/div/input')
-.dblclick()
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[4]/td[7]/div/div/input')
+ .click()
+ .type('{selectall}')
+ .type('{backspace}')
+ .type('5')
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[7]/div/div/input')
+ .click()
+ .type('{selectall}')
+ .type('{backspace}')
+ .type('6')
+
+ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[7]/div/div/input')
+ .click()
+ .type('{selectall}')
+ .type('{backspace}')
+ .type('7')
+// customizing unit prices
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('1')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('2')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('3')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[4]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('4')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('5')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('6')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[7]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('7')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[8]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('8')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('9')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
 .type('{backspace}')
 .type('10')
 
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[11]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('11')
 
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[3]/div[1]/div[2]/div/div/div/table/tbody/tr[12]/td[9]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('12')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[1]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('13')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[2]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('14')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[3]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('15')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[4]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('16')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[5]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('17')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[6]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('18')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[7]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('19')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[8]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('20')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[9]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('21')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[10]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('22')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[11]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('23')
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[4]/div[5]/div[1]/div[2]/div/div/div/table/tbody/tr[12]/td[6]/div/span/div/div/input')
+.click()
+.type('{selectall}')
+.type('{backspace}')
+.type('24')
 
   })
 })
