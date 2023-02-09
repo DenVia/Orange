@@ -14,34 +14,36 @@ describe('Solid logic e2e test run', () => {
 
     cy. pause()
 
-   cy.percySnapshot('Login page start');
+    cy.wait(2000)
 
-   //cy.get('[href="/auth/forgot-password"] > .MuiTypography-root').click()
+   cy.percySnapshot('Login page start', { widths: [1920] });
 
-   //cy.get('[class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-1u0h3mu"]').type('viacheslav.denysov@solidlogic.com')
+   cy.get('[href="/auth/forgot-password"] > .MuiTypography-root').click()
 
-   cy.percySnapshot('Forgot password');
+   cy.get('[class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-1u0h3mu"]').type('viacheslav.denysov@solidlogic.com')
 
-   //cy.get('.MuiButtonBase-root').click();
+   cy.percySnapshot('Forgot password', { widths: [1920] });
 
-   cy.percySnapshot('Forgot password "link sent" modal');
+   cy.get('.MuiButtonBase-root').click();
 
-   //cy.get('.MuiButtonBase-root').click();
+   cy.get('.MuiButtonBase-root').click();
 
-   cy.get('[id=":r0:"]').type('viacheslav.denysov@solidlogic.com')
+   cy.xpath('/html/body/div/main/div/div/div[2]/form/div[1]/div/input').click().type('viacheslav.denysov@solidlogic.com')
 
    cy.get('[name="password"]').type('ZXCasd098!');
 
-   cy.percySnapshot('Login page masked');
+   cy.percySnapshot('Login page masked', { widths: [1920] });
 
    cy.get('.MuiInputAdornment-root > .MuiButtonBase-root').click();
   
-   cy.percySnapshot('Login page unmasked');
+   cy.percySnapshot('Login page unmasked', { widths: [1920] });
 
 
-    cy.contains('Log In').click();
+   cy.contains('Log In').click();
 
-   cy.percySnapshot('Dashboard');
+   cy.wait(5000)
+
+   cy.percySnapshot('Dashboard', { widths: [1920] });
 
     cy.get('[href="/trade-entry"]').then((link) => {
       cy.request(link.prop('href'))
@@ -51,7 +53,9 @@ describe('Solid logic e2e test run', () => {
 
     cy.get('[data-testid="SwitchHorizontalIcon"]').click();
 
-   cy.percySnapshot('Dashboard Empty')
+    cy.wait(2000)
+
+   cy.percySnapshot('Trade Entry Empty', { widths: [1920] })
 
     cy.xpath('/html/body/div/div[2]/div[1]/main/div[1]/div/div/div[1]/div[2]/div/div/div/div[3]/div/div/div/input')
       .click()
@@ -212,19 +216,26 @@ cy.get('#ticket').type('AutoTestTicket')
   .type('081255')
   .tab()
   .type('{downArrow}')
-  .percySnapshot('Firms List');
+  .percySnapshot('Firm List', { widths: [1920] });
 
   cy.get('[placeholder="Select firm"]')
   .click()
-  .percySnapshot('Group List');
+
+  cy.wait(1000)
   
   cy.get('[placeholder="Select group"]')
   .click()
-  .percySnapshot('Group List');
 
-  cy.get('[placeholder="Select account"]')
+  cy.wait(1000)
+
+  cy.percySnapshot('Group List', { widths: [1920] });
+
+  cy.get('[placeholder="Select account"]', { widths: [1920] })
   .click()
-  .percySnapshot('Group List');
+
+  cy.wait(1000)
+
+  cy.percySnapshot('Account List', { widths: [1920] });
 
 
   cy.get('[placeholder="Select firm"]')
@@ -844,7 +855,7 @@ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[5]/div/div[1]/div[2]/div/
 cy.xpath('/html/body/div[2]/div[3]/ul/li[3]')
 .click()
 
-cy.percySnapshot('Trade Entry full')
+cy.percySnapshot('Trade Entry full', { widths: [1920] })
 
   })
 })
