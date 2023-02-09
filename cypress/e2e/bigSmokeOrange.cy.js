@@ -238,7 +238,7 @@ cy.get('#ticket').type('AutoTestTicket')
   .type('{downArrow}').type('{downArrow}')
   .type('{Enter}')
 
-//setting leg's fields values manually
+//setting leg's fields values manually-------------------------------------------
 
 //buy/sell dropdown menus
 
@@ -843,6 +843,8 @@ cy.xpath('/html/body/div/div[2]/div[1]/main/div[2]/div[5]/div/div[1]/div[2]/div/
 
 cy.xpath('/html/body/div[2]/div[3]/ul/li[3]')
 .click()
+
+cy.percySnapshot('Trade Entry full')
 
   })
 })
