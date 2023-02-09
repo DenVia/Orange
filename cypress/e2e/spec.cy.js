@@ -10,7 +10,7 @@ describe('Solid logic e2e test run', () => {
 
     cy.viewport(1920, 1080)
 
-    cy.visit('https://orange-wave-dev.solidlogic.dev/');
+    cy.visit('https://orange-wave-dev.solidlogic.dev/auth/login');
 
     cy. pause()
 
