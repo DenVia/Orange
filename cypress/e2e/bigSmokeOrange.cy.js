@@ -211,9 +211,9 @@ describe('Solid logic e2e test run', () => {
 
 cy.get('#ticket').type('AutoTestTicket')
   .tab()
-  .type('081240')
+  .type('081245')
   .tab()
-  .type('081255')
+  .type('081250')
   .tab()
   .type('{downArrow}')
   .percySnapshot('Firm List', { widths: [1920] });
@@ -856,6 +856,55 @@ cy.xpath('/html/body/div[2]/div[3]/ul/li[3]')
 .click()
 
 cy.percySnapshot('Trade Entry full', { widths: [1920] })
+
+cy.contains('Check Trade').click()
+
+cy.wait(5000)
+
+cy.percySnapshot('Trade submission screen with generic CSV', { widths: [1920] })
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div/div[4]/div[1]/div[2]/div/div').click()
+
+cy.get('[data-value="Drax"]').click()
+
+cy.wait(5000)
+
+cy.percySnapshot('Trade submission screen with Drax CSV', { widths: [1920] })
+
+cy.xpath('/html/body/div/div[2]/div[1]/main/div/div[4]/div[1]/div[2]/div/div').click()
+
+cy.get('[data-value="StoneX"]').click()
+
+cy.wait(5000)
+
+cy.percySnapshot('Trade submission screen with StoneX CSV', { widths: [1920] })
+
+cy.get('[data-testid="TicketIcon"]').click()
+
+cy.wait(2000)
+
+cy.percySnapshot('PDF ticket preview', { widths: [1920] })
+
+cy.xpath('/html/body/div[2]/div[3]/div/div[2]/button[1]').click()
+
+cy.contains('Send Email').click()
+
+cy.wait(2000)
+
+cy.percySnapshot('Email modal', { widths: [1920] })
+
+//----------------add cancel----------------
+
+cy.contains('Submit to Clearing Firm').click()
+
+cy.wait(2000)
+
+cy.percySnapshot('Clearing firm modal', { widths: [1920] })
+
+cy.xpath('/html/body/div[2]/div[3]/div/div[2]/button[1]').click()
+
+cy.contains('Save Trade').click()
+
 
   })
 })
