@@ -1,6 +1,7 @@
 
 
 //percy exec -- cypress run
+//set PERCY_TOKEN=465b6e7201ee00043982b57ebe12e53bd04d3fb47df5fc2339c00e1b7ce65a8e
 
 /// <reference types= 'cypress'/> 
 
@@ -879,31 +880,42 @@ cy.wait(5000)
 
 cy.percySnapshot('Trade submission screen with StoneX CSV', { widths: [1920] })
 
-cy.get('[data-testid="TicketIcon"]').click()
+cy.get('[data-test-id="trade-submission-preview-ticket-button"]').click()
 
-cy.wait(2000)
+cy.wait(4000)
 
 cy.percySnapshot('PDF ticket preview', { widths: [1920] })
 
-cy.xpath('/html/body/div[2]/div[3]/div/div[2]/button[1]').click()
+cy.get('[data-test-id="ticket-modal-cancel-button"]').click()
 
-cy.contains('Send Email').click()
+cy.get('[data-test-id="trade-submission-send-email-button"]').click()
 
 cy.wait(2000)
 
 cy.percySnapshot('Email modal', { widths: [1920] })
 
+cy.get('[name="to"]')
+  .click()
+  .type('viacheslav.denysov@solidlogic.com')
+  .type('{Enter}')
+
+cy.get('[data-test-id="email-modal-send-button"]').click()
+
+cy.wait(2000)
+
+
+
 //----------------add cancel----------------
 
-cy.contains('Submit to Clearing Firm').click()
+cy.get('[data-test-id="trade-submission-submit-firm-button"]').click()
 
 cy.wait(2000)
 
 cy.percySnapshot('Clearing firm modal', { widths: [1920] })
 
-cy.xpath('/html/body/div[2]/div[3]/div/div[2]/button[1]').click()
+cy.get('[data-test-id="submit-modal-cancel-button"]').click()
 
-cy.contains('Save Trade').click()
+cy.get('[data-test-id="trade-submission-save-trade-button"]').click()
 
 
   })
