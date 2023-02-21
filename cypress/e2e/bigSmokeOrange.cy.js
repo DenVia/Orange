@@ -882,7 +882,7 @@ cy.percySnapshot('Trade submission screen with StoneX CSV', { widths: [1920] })
 
 cy.get('[data-test-id="trade-submission-preview-ticket-button"]').click()
 
-cy.wait(4000)
+cy.wait(10000)
 
 cy.percySnapshot('PDF ticket preview', { widths: [1920] })
 
