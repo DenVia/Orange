@@ -1,6 +1,6 @@
 
 
-//percy exec -- cypress run
+//npx percy exec -- cypress run
 //set PERCY_TOKEN=465b6e7201ee00043982b57ebe12e53bd04d3fb47df5fc2339c00e1b7ce65a8e
 
 /// <reference types= 'cypress'/> 
@@ -21,7 +21,7 @@ describe('Solid logic e2e test run', () => {
 
    cy.get('[href="/auth/forgot-password"] > .MuiTypography-root').click()
 
-   cy.get('[class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-1u0h3mu"]').type('viacheslav.denysov@solidlogic.com')
+   cy.get('[data-test-id="forgot-password-form-username-input"]').type('viacheslav.denysov@solidlogic.com')
 
    cy.percySnapshot('Forgot password', { widths: [1920] });
 
